@@ -1,0 +1,17 @@
+D:\Projekty\Chat_app\Client\C#_version\bin\Debug\net8.0\C#_version.exe
+D:\Projekty\Chat_app\Client\C#_version\bin\Debug\net8.0\C#_version.deps.json
+D:\Projekty\Chat_app\Client\C#_version\bin\Debug\net8.0\C#_version.runtimeconfig.json
+D:\Projekty\Chat_app\Client\C#_version\bin\Debug\net8.0\C#_version.dll
+D:\Projekty\Chat_app\Client\C#_version\bin\Debug\net8.0\C#_version.pdb
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.AssemblyInfoInputs.cache
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.AssemblyInfo.cs
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.csproj.CoreCompileInputs.cache
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.dll
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\refint\C#_version.dll
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.pdb
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.genruntimeconfig.cache
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\ref\C#_version.dll
+D:\Projekty\Chat_app\Client\C#_version\bin\Debug\net8.0\Spectre.Console.dll
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.csproj.AssemblyReference.cache
+D:\Projekty\Chat_app\Client\C#_version\obj\Debug\net8.0\C#_version.csproj.Up2Date
