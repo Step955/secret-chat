@@ -15,19 +15,9 @@ using System.Reflection.Metadata;
 class Program
 {
 
-
-
-    //main program functions
+    //main program functions:
     static async Task Main(string[] args)
     {
-        /*
-        var data = await Get_messages("", "http://127.0.0.1:8000/data");
-        Console.WriteLine(data);
-        foreach (var row in data)
-        {
-            Console.WriteLine(string.Join(", ", row));
-        }
-        */
         Dictionary<string, string> app_info = info_setup();
        
         BranchesController(app_info).GetAwaiter().GetResult();
@@ -35,6 +25,9 @@ class Program
 
     static async Task BranchesController(Dictionary<string, string> appinfo)
     {
+
+        //shared variables:
+
         dynamic text = new System.Dynamic.ExpandoObject();
         dynamic messages = new System.Dynamic.ExpandoObject();
         dynamic changed = new System.Dynamic.ExpandoObject();
@@ -42,11 +35,11 @@ class Program
 
         app_info.value = appinfo;
         changed.value = true;
-        //messages.values = fill_messages();  // Shared variable
         messages.values = await Get_messages(app_info.value["Token"], app_info.value["IP"] + "/getchat");
         text.values = new List<string>();
         text.value = "";
 
+        //creating and running asynchronus functions:
 
         var updateTask = update_messages(messages, changed, app_info);
         var mainTask = MainLoop(messages, text, changed, app_info);
@@ -55,7 +48,7 @@ class Program
         await Task.WhenAny(updateTask, mainTask, userInput);
     }
 
-    // app setup
+    // app set up:
 
     static Dictionary<string, string> info_setup()
     {
@@ -86,7 +79,7 @@ class Program
         return info;
     }
 
-    //set_up functions
+    //set up functions:
     static List<List<string>> fill_messages()
     {
         List<List<string>> messages = new List<List<string>>();
@@ -102,15 +95,15 @@ class Program
         }
         return messages;
     }
-    //chat functions
+
+    //chat functions:
 
     static async Task update_messages(dynamic messages, dynamic changed, dynamic app_info)
     {
         while (true)
         {
-            messages.values = await Get_messages(app_info.value["Token"], app_info.value["IP"] + "/getchat");  // Update the variable
+            messages.values = await Get_messages(app_info.value["Token"], app_info.value["IP"] + "/getchat");
             await Task.Delay(1000);
-            //Console.WriteLine("update " + var.value);
             changed.value = true;
         }
     }
@@ -154,7 +147,6 @@ class Program
                
             }
 
-            //Console.WriteLine(sequence);
             await Task.Delay(0);
 
         }
@@ -201,7 +193,6 @@ class Program
 
     static void messageRenderer(string message = "", string user = "", string me = "")
     {
-        string empty = "";
 
         if (message.Length < 36)
         {
@@ -241,9 +232,9 @@ class Program
     }
 
 
-    // HTTP managment
+    // HTTP managment:
 
-        //authentication
+        //authentication:
     public static async Task<string> GetToken(Dictionary<string, string> app_info)
     {
         using (var client = new HttpClient())
@@ -269,7 +260,7 @@ class Program
         }
     }
 
-        //messages loading
+        //messages loading:
     static async Task<List<List<string>>> Get_messages(string token, string adress)
     {
 
@@ -290,7 +281,7 @@ class Program
         }
     }
 
-        //message send
+        //message send:
 
     static async Task sendMessage(string token, string adress, string message) { 
     
